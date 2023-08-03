@@ -1,32 +1,43 @@
 body {
-  background-image: url("image.jpg");
+  background-image: url("ooorganize\ \(2\).svg");
+  background-size: cover; 
+  background-color: #000322;
+  color: wheat;
 }
 
+#audio-file-input{
+  background-color: #000000;
+  width: 20em;
+  color: white;
+  padding: 0.3em;
+  border-radius: 45px;
+  margin: 0% auto;
+  margin-bottom: 0%;
+}
 #song-list-wrapper {
-  height: 250px; /* Измените высоту по своему усмотрению */
+  height: 18em; /* Измените высоту по своему усмотрению */
   overflow: auto; /* Добавлено свойство для появления прокрутки */
-  margin-top: 30px;
+  margin-top: 1em;
+  padding: 1em;
+
 }
-
-
 #song-list {
-  background: linear-gradient(to top, #D6D6D6, #757575);
+  background: rgb(20, 20, 20);
   background-size: 100%;
   font-family: 'Comic Sans MS';
   font-weight: bold;
   text-shadow: 0px 0px 10px #242424;
   text-align: center;
-  margin-top: 30px;
   cursor: pointer;
-  padding: auto;
+  padding: 1em;
   display: table;
   vertical-align: middle;
-  width: 250px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid #313131;
+  width: 20em;
+  height: 10em;
+  margin: 0% auto;
   border-radius: 10px;
+  box-shadow: 0px 5px 12px 0px #ffd900;
+
 }
 
 #song-list .song-item.active {
@@ -34,31 +45,47 @@ body {
 }
 
 #audio-player {
+  display: flex;
+  justify-content:center;
+
+  flex-direction: column;
   text-align: center;
+  margin: 0% auto;
   margin-top: 50px;
+  /* max-width: 100vw; */
+    max-width:60em;
+  height: 100vh;
 }
 
 #controls button {
-  margin: 5px;
-  font-family: 'Comic Sans MS';
-  font-weight: bold;
-  color: #000000 !important;
+  background-color: #ffffff;
   font-size: 15px;
-  text-shadow: 0px 0px 10px #242424;
-  box-shadow: 3px 4px 5px #3C484F;
-  padding: 11px 5px;
-  border-radius: 14px;
-  border: 2px outset #000000;
-  background: #D6D6D6;
-  background: linear-gradient(to top, #D6D6D6, #757575);
-}
+  width: 3em;
+  height: 3em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 45px;
+  border: none;
+  transition: 0.3s;
 
+}
+.button{
+  width: 2em;
+  height: 2em;
+}
 #controls button:hover {
   color: #000000 !important;
-  background: #757575;
-  background: linear-gradient(to top, #757575, #D6D6D6);
+  background: #ffd901;
+  cursor: pointer;
 }
-
+#controls{
+  width: fit-content;
+  margin: 0% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+}
 #volume-control {
   text-align: center;
   margin-top: 15px;
@@ -73,39 +100,39 @@ input[type=range] {
   background-color: transparent;
   height: 32px;
   -webkit-appearance: none;
-  margin: 10px 0;
+  margin: 2px 0;
   width: 300px;
 }
 
 input[type=range]:focus {
-  outline: none;
+  outline: nones;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 17px;
+  height: 10px;
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 9px 9px 10px #000000;
-  background: #B6B6B6;
+  background: #ffffff;
   border-radius: 48px;
-  border: 1px solid #8A8A8A;
+  border: none;
 }
 
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 7px #828282;
-  border: 1px solid #8A8A8A;
-  height: 24px;
-  width: 34px;
-  border-radius: 4px;
-  background: #DADADA;
+  box-shadow: 1px 1px 7px #ffd900;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 45px;
+  background: #000000;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -4.5px;
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #B6B6B6;
+  background: white;
 }
 
 input[type=range]::-moz-range-track {
@@ -114,18 +141,18 @@ input[type=range]::-moz-range-track {
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 9px 9px 10px #000000;
-  background: #B6B6B6;
+  background: #ffffff;
   border-radius: 48px;
-  border: 1px solid #8A8A8A;
+  border: 1px solid #ffd900;
 }
 
 input[type=range]::-moz-range-thumb {
   box-shadow: 1px 1px 7px #828282;
-  border: 1px solid #8A8A8A;
+  border: 1px solid #ffd900;
   height: 24px;
   width: 34px;
   border-radius: 4px;
-  background: #DADADA;
+  background: white;
   cursor: pointer;
 }
 
@@ -140,34 +167,64 @@ input[type=range]::-ms-track {
 }
 
 input[type=range]::-ms-fill-lower {
-  background: #B6B6B6;
-  border: 1px solid #8A8A8A;
+  background: #ffffff;
+  border: 1px solid #ffd900;
   border-radius: 96px;
   box-shadow: 9px 9px 10px #000000;
 }
 
 input[type=range]::-ms-fill-upper {
-  background: #B6B6B6;
-  border: 1px solid #8A8A8A;
+  background: white;
+  border: 1px solid #ffd900;
   border-radius: 96px;
   box-shadow: 9px 9px 10px #000000;
 }
 
 input[type=range]::-ms-thumb {
   margin-top: 1px;
-  box-shadow: 1px 1px 7px #828282;
-  border: 1px solid #8A8A8A;
+  box-shadow: 1px 1px 7px black;
+  border: 1px solid #ffd900;
   height: 24px;
   width: 34px;
   border-radius: 4px;
-  background: #DADADA;
+  background: white;
   cursor: pointer;
 }
 
 input[type=range]:focus::-ms-fill-lower {
-  background: #B6B6B6;
+  background: white;
 }
 
 input[type=range]:focus::-ms-fill-upper {
-  background: #B6B6B6;
+  background: white;
+}
+
+@media only screen and (max-width:696px){
+  #song-list-wrapper {
+    height: 18em; /* Измените высоту по своему усмотрению */
+    overflow: auto; /* Добавлено свойство для появления прокрутки */
+    margin-top: 1em;
+    padding: 1em;
+    border: 1px solid white;
+  
+  }
+  #song-list {
+    background: rgb(20, 20, 20);
+    background-size: 100%;
+    font-family: 'Comic Sans MS';
+    font-weight: bold;
+    text-shadow: 0px 0px 10px #242424;
+    text-align: center;
+    cursor: pointer;
+    padding: 1em;
+    display: table;
+    vertical-align: middle;
+    width: 80%;
+    height: 15em;
+    margin: 0% auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 12px 0px #ffd900;
+  
+  }
+  
 }

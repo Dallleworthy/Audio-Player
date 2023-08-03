@@ -1,0 +1,42 @@
+{
+  "name": "player",
+  "version": "0.0.1",
+  "main": "main.js",
+  "window": {
+    "width": 350,
+    "height": 650,
+    "frame": true
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "MrDale",
+  "description": "none",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.3.0",
+    "electron-builder": "^22.0.1"
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "productName": "My Player",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "your.app.category.type",
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "dependencies": {
+    "minimatch": "^9.0.3"
+  }
+}
+
